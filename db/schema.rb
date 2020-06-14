@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2020_06_13_144135) do
   create_table "meals", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "price"
-    t.string "avaible"
+    t.float "price"
+    t.boolean "available"
     t.bigint "meal_category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -1,0 +1,15 @@
+current directory: /home/icaro/Documentos/Dev/cjr/DinnerDash/vendor/bundle/gems/websocket-driver-0.7.2/ext/websocket-driver
+/home/icaro/.rvm/rubies/ruby-2.6.0/bin/ruby -I /home/icaro/.rvm/rubies/ruby-2.6.0/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200614-15053-1ao5s85.rb extconf.rb
+creating Makefile
+
+current directory: /home/icaro/Documentos/Dev/cjr/DinnerDash/vendor/bundle/gems/websocket-driver-0.7.2/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/icaro/Documentos/Dev/cjr/DinnerDash/vendor/bundle/gems/websocket-driver-0.7.2/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/icaro/Documentos/Dev/cjr/DinnerDash/vendor/bundle/gems/websocket-driver-0.7.2/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20200614-15053-1loakr9
