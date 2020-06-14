@@ -3,6 +3,6 @@ class MealCategory < ApplicationRecord
 
     # VALIDATIONS
 
-    validates :name, presence: true, length: { minimum: 1, maximum: 45 }
+    validates :name, presence: true, length: { minimum: 1, maximum: 45 }, uniqueness: { case_sensitive: false }
 
 end

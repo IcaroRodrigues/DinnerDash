@@ -3,5 +3,5 @@ class Situation < ApplicationRecord
 
     # VALIDATIONS
 
-    validates :description, presence: true, length: { minumum: 1, maximum: 45 }
+    validates :description, presence: true, length: { minimum: 1, maximum: 45 }
 end
