@@ -8,6 +8,7 @@ class Order < ApplicationRecord
   # VALIDATIONS
 
   validates :price, presence: true, numericality: { only_float: true } 
+  validates :quantity, presence: true, length: { minimum: 1, maximum: 20 }
 
   def set_default 
     if self.price == numericality
@@ -18,7 +19,7 @@ class Order < ApplicationRecord
   def set_price
     @price = 0
     self.OrderMeal.each do | order_meal |
-      @price = (OrderMeal.quality * OrderMeal.meal.price ) + @price
+      @price = (Order.quantity * OrderMeal.meal.price) + @price
     end
     sel.price = @price
   

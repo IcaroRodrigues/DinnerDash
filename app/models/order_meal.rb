@@ -4,7 +4,7 @@ class OrderMeal < ApplicationRecord
 
   # VALIDATIONS
 
-  validates :quantity, presence: true, length: { minimum: 1, maximum: 20 }
+  
   validates :order_id, presence: true
   validates :meal_id, presence: true
 

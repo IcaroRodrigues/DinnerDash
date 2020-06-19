@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_011725) do
   end
 
   create_table "order_meals", force: :cascade do |t|
-    t.integer "quantity"
+  
     t.bigint "order_id", null: false
     t.bigint "meal_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_011725) do
 
   create_table "orders", force: :cascade do |t|
     t.float "price"
+    t.integer "quantity"
     t.bigint "user_id", null: false
     t.bigint "situation_id", null: false
     t.datetime "created_at", precision: 6, null: false

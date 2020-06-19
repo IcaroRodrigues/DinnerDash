@@ -16,12 +16,14 @@ situations = Situation.create([
 ])
 
 orders = Order.create([
-    {situation_id:1},
-    {situation_id:1},
-    {situation_id:1}
+    {quantity: 2, situation_id:1},
+    {quantity: 2, situation_id:2},
+    {quantity: 2, situation_id:3}
 ])
 orderMeals = OrderMeal.create([
-    {quantity:2, order_id: 1, meal_id: 1}
+    {order_id: 1, meal_id: 1},
+    {order_id: 2, meal_id: 2},
+    {order_id: 3, meal_id:3 }
 ])
 
 
