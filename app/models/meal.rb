@@ -18,4 +18,9 @@ class Meal < ApplicationRecord
   validates :available, inclusion: { in: [ true, false ] }
   validates :available, exclusion: { in: [ nil ] }
 
+
+  # ACTIVE_STORAGE 
+
+  has_one_attached :image
+  
 end

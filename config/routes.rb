@@ -20,11 +20,11 @@ Rails.application.routes.draw do
   post "/orders", to: "orders#create"
   delete "/orders/:id", to: "orders#destroy"
 
-  get "/orders", to: "order_meals#index"
-  get "/orders/:id", to: "order_meals#show"
-  put "/orders/:id", to: "order_meals#update"
-  post "/orders", to: "order_meals#create"
-  delete "/orders/:id", to: "order_meals#destroy"
+  get "/orders_meals", to: "order_meals#index"
+  get "/orders_meals/:id", to: "order_meals#show"
+  put "/orders_meals/:id", to: "order_meals#update"
+  post "/orders_meals", to: "order_meals#create"
+  delete "/orders_meals/:id", to: "order_meals#destroy"
 
   get "/situations", to: "situations#index"
   get "/situations/:id", to: "situations#show"
