@@ -60,6 +60,6 @@ class OrderMealsController < ApplicationController
     end
 
     def order_meal_params
-        params.require( :order_meal )
+        params.require( :order_meal ).permit( :meal_id, :order_id, :quantity )
     end
 end 

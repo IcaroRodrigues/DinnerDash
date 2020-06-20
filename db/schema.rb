@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_06_19_011725) do
   
     t.bigint "order_id", null: false
     t.bigint "meal_id", null: false
+    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["meal_id"], name: "index_order_meals_on_meal_id"
@@ -65,7 +66,6 @@ ActiveRecord::Schema.define(version: 2020_06_19_011725) do
 
   create_table "orders", force: :cascade do |t|
     t.float "price"
-    t.integer "quantity"
     t.bigint "user_id", null: false
     t.bigint "situation_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -81,28 +81,10 @@ ActiveRecord::Schema.define(version: 2020_06_19_011725) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "provider", default: "email", null: false
-    t.string "uid", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.boolean "allow_password_change", default: false
-    t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
-    t.string "name"
-    t.string "nickname"
-    t.string "image"
-    t.string "email"
-    t.json "tokens"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password", null: false
+    t.boolean "admin", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
