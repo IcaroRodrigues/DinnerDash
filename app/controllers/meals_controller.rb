@@ -4,8 +4,8 @@ class MealsController < ApplicationController
  
     def index
 
-        @meal = Meal.all
-        render json: @meal
+        @q = Meal.ransack(params[:q])
+        @people = @q.result(distinct: true)
 
     end
 
