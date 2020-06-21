@@ -31,5 +31,11 @@ Rails.application.routes.draw do
   put "/situations/:id", to: "situations#update"
   post "/situations", to: "situations#create"
   delete "/situations/:id", to: "situations#destroy"
-  
+
+
+  post '/auth/login', to: 'authentication#login'
+  post '/users', to: 'users#create'
+  get '/users', to: 'users#index'
+  get '/*a', to: 'application#not_found'
+   
 end

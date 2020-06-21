@@ -16,6 +16,8 @@ class OrderMeal < ApplicationRecord
   def update_order
 
     self.order.price = ( self.quantity * self.meal.price  ) + self.order.price
+
+    self.order.save
   
   end 
 end
