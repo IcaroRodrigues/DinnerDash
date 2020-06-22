@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.0'
 
+gem "aws-sdk-s3", require: false
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'devise_token_auth'
 gem 'rails-erd'

@@ -1,4 +1,5 @@
 class Meal < ApplicationRecord
+  
   belongs_to :meal_category
   has_many :order, :through => :order_meal
   #accepts_nested_attributes_for :meal_category
@@ -22,5 +23,13 @@ class Meal < ApplicationRecord
   # ACTIVE_STORAGE 
 
   has_one_attached :image
+  include Rails.application.routes.url_helpers
+  def image_url
+    if self.image.attached?
+      url_for(self.image)
+    else
+      ""
+    end
+  end      
   
 end

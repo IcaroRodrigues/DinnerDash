@@ -11,8 +11,9 @@ class MealsController < ApplicationController
 
 
     def show
-
-        render json: @meal, status: 200
+        
+        @meal = Meal.find params[:id]
+        render json: @meal, methods:[:image_url], status: 200
 
     end
 
@@ -60,7 +61,7 @@ class MealsController < ApplicationController
     end
 
     def meal_params
-        params.require( :meal ).permit( :name, :description, :price, :available, :meal_category_id )
+        params.require( :meal ).permit( :name, :description, :price, :available, :meal_category_id, :image)
     end
 
 end 
